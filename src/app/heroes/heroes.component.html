@@ -23,10 +23,15 @@
 <h2>My Heroes</h2>
 
 <ul class="heroes">
+<!-- *ngFor statement lists the heroes - hero is cv -->
+<!-- (click) is an event binder for the <li> -->
+  <!-- onSelect method is the event handler, defined in heroes.ts -->
+  <!-- [class.selected] toggles the css class, so when it's selected different styles apply -->
   <li *ngFor="let hero of heroes"
+  
     [class.selected]="hero === selectedHero"
     (click)="onSelect(hero)">
-    <span class="badge">{{hero.id}}</span> {{hero.name}}
+    <span class="badge">{{hero.id}}</span> {{hero.name | uppercase}}
   </li>
 </ul>
 
