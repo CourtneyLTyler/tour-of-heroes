@@ -1,11 +1,12 @@
 <div *ngIf="hero">
 
-    <h2>{{hero.name | uppercase}} Details</h2>
-    <div><span>id: </span>{{hero.id}}</div>
-    <div>
-      <label>name:
-        <input [(ngModel)]="hero.name" placeholder="name"/>
-      </label>
-    </div>
-  
+  <h2>{{hero.name | uppercase}} Details</h2>
+  <div><span>id: </span>{{hero.id}}</div>
+  <div>
+<!-- two-way data binding: below it binds the hero.name property to the HTML textbox so that data can flow from the hero.name property to the textbox and back. -->
+    <label>name:
+      <input [(ngModel)]="hero.name" placeholder="name"/>
+    </label>
   </div>
+
+</div>
